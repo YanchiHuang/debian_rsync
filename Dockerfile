@@ -28,5 +28,5 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* 
 	
 #設定WorkDir
-WORKDIR /usr/bin/rsync
+WORKDIR /usr/bin/
 ENTRYPOINT ["/usr/bin/rsync"]
