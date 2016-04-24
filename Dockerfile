@@ -1,4 +1,4 @@
-FROM debian:lastest
+FROM debian:stable
 
 MAINTAINER Yanchi
 
