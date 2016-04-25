@@ -12,7 +12,8 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends runit \
     && apt-get install -y --no-install-recommends vim \
     && apt-get install -y --no-install-recommends cron \
-	&& apt-get install -y --no-install-recommends rsync \
+    && apt-get install -y --no-install-recommends rsync \
+    && apt-get install -y --no-install-recommends ssh \
     && mkdir /etc/service/cron \
     && echo '#!/bin/sh' > /etc/service/cron/run \
     && echo 'exec /usr/sbin/cron -f' >> /etc/service/cron/run \
