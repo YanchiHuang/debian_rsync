@@ -30,4 +30,4 @@ RUN apt-get update \
 	
 #設定WorkDir
 WORKDIR /etc
-#ENTRYPOINT ["/usr/bin/rsync"]
+ENTRYPOINT ["/usr/bin/rsync"]
