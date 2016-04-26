@@ -30,4 +30,4 @@ RUN apt-get update \
 	
 #設定WorkDir
 WORKDIR /etc
-#CMD ["/etc/service/cron","start"]
+CMD ["su","/etc/service/cron","start"]
