@@ -6,7 +6,10 @@ MAINTAINER Yanchi
 #RUN rm /etc/timezone \
 #    && echo "Asia/Taipei" > /etc/timezone \
 #    && chmod 644 /etc/timezone
-    
+ENV TZ=Asia/Taipei
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
+    && chmod 644 /etc/timezone
+
 #執行apt-get更新套件，設定Cron工作排程器
 RUN apt-get update \
     && apt-get install -y --no-install-recommends runit \
